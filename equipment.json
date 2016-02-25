@@ -1,0 +1,34 @@
+{
+	"equipment": [
+		{
+			"name": "PDX-250",
+			"type": "open-end headphones",
+			"usage": "gaming/music"			
+		},
+		{
+			"name": "Senheiser 2",
+			"type": "closed-end headphones",
+			"usage": "music"	
+		},
+		{
+			"name": "HX - 200",
+			"type": "open-end headphones",
+			"usage": "gaming/music"	
+		},
+		{
+			"name": "Apple Earpods",
+			"type": "in-ear earphones",
+			"usage": "music"	
+		},
+		{
+			"name": "HD-250",
+			"type": "open-end headphones",
+			"usage": "gaming/music"	
+		},
+		{
+			"name": "DPS-2510",
+			"type": "open-end headphones",
+			"usage": "gaming/music"	
+		}
+	]
+}

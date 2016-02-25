@@ -1,0 +1,40 @@
+{
+	"environment": [
+		{
+			"name": "Home",
+			"equipment": "Senheiser2",
+			"noise": "quiet",
+			"type": "home"			
+		},
+		{
+			"name": "Bus",
+			"equipment": "Apple Earpods",
+			"noise": "loud",
+			"type": "bus"
+		},
+		{
+			"name": "Work",
+			"equipment": "PDX-510",
+			"noise": "medium",
+			"type": "building"	
+		},
+		{
+			"name": "Room",
+			"equipment": "HHX - 2100",
+			"noise": "quiet",
+			"type": "home"	
+		},
+		{
+			"name": "Dorm",
+			"equipment": "PDX-510",
+			"noise": "medium",
+			"type": "home"	
+		},
+		{
+			"name": "Campus",
+			"equipment": "QHX-222",
+			"noise": "loud",
+			"type": "university"
+		}
+	]
+}

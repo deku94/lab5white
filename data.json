@@ -1,0 +1,132 @@
+{
+	"environment": [
+		{
+			"name": "Home",
+			"equipment": "Senheiser 2",
+			"noise": "quiet",
+			"type": "home",
+			"soundValue": "33",		
+			"idnum":"0"
+		},
+		{
+			"name": "Bus",
+			"equipment": "Apple Earpods",
+			"noise": "loud",
+			"type": "bus",
+			"soundValue": "100",
+			"idnum":"1"
+		},
+		{
+			"name": "Work",
+			"equipment": "PDX-510",
+			"noise": "medium",
+			"type": "building",
+			"soundValue": "66",
+			"idnum":"2"	
+		},
+		{
+			"name": "Room",
+			"equipment": "HX-200",
+			"noise": "quiet",
+			"type": "home",
+			"soundValue": "33",
+			"idnum":"3"
+		},
+		{
+			"name": "Dorm",
+			"equipment": "PDX-510",
+			"noise": "medium",
+			"type": "home",
+			"soundValue": "66",
+			"idnum":"4"
+		},
+		{
+			"name": "Campus",
+			"equipment": "DPS-2510",
+			"noise": "loud",
+			"type": "university",
+			"soundValue": "100",
+			"idnum":"5"
+		}
+	],
+	"equipment": [
+		{
+			"name": "PDX-510",
+			"type": "open-end headphones",
+			"usage": "gaming/music",
+			"idnum":"0"		
+		},
+		{
+			"name": "Senheiser 2",
+			"type": "closed-end headphones",
+			"usage": "music",
+			"idnum":"1"	
+		},
+		{
+			"name": "HX-200",
+			"type": "open-end headphones",
+			"usage": "gaming/music"	,
+			"idnum":"2"
+		},
+		{
+			"name": "Apple Earpods",
+			"type": "in-ear earphones",
+			"usage": "music",
+			"idnum":"3"	
+		},
+		{
+			"name": "HD-250",
+			"type": "open-end headphones",
+			"usage": "gaming/music"	,
+			"idnum":"4"
+		},
+		{
+			"name": "DPS-2510",
+			"type": "open-end headphones",
+			"usage": "gaming/music"	,
+			"idnum":"5"
+		}
+	],
+	"places": [
+		{
+			"location" : "home"
+		},		    
+		{
+			"location" : "bus"
+		},	
+		{
+			"location" : "building"
+		},
+		{
+			"location" : "university"
+		}  
+			
+	],
+	"headphones_options":
+	{
+		"open-end":"open-end", 
+		"closed-end" :"closed-end",  
+		"in-ear":"in-ear"
+	},
+	"speaker_options":
+	{
+		"Bluetooth-speaker":"Bluetooth speaker", 
+		"soundsystem":"soundsystem", 
+		"pc-speakers":"pc speakers"
+	},
+	"soundTemp":{
+		"value":"50"
+	},
+    "communities": [
+        {
+            "name": "Head-Fi",
+            "url": "http://www.head-fi.org/",
+            "desc": "website for forums, buying guides, and reviews for audio equipment"
+        },
+        {
+            "name": "CNET",
+            "url": "http://www.cnet.com/topics/audio/",
+            "desc": "reviews on the newest audio equipment"
+        }
+    ]
+}
