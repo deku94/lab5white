@@ -9,7 +9,7 @@
 	
 	<script src="/js/jquery-1.11.0.js" type="text/javascript"></script>
 	<script src="/js/bootstrap.js" type="text/javascript"></script>
-	<script src="/js/hci-friends.js" type="text/javascript"></script>
+	<script src="/js/overlay.js" type="text/javascript"></script>
 	<link rel="stylesheet" href="css/hci-friends.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.css">
@@ -25,11 +25,95 @@
 <body style = "background-color:#FFFFFF" >
 	{{> navbarsPartials}}
 <div class = "container" >
+    <div id="overlay-inAbox" class="overlay">
+    
+    <div class="container">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+    <!-- Indicators -->
+    
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <div class = "container" style = "margin-right: 35px; margin-left: 35px">
+          <div class = "row">
+            <img src = "http://icons.iconarchive.com/icons/svengraph/i-love/512/Headphones-icon.png" style = "max-width: 150px; margin-left:60px" alt = "headphones"></img>
+             <h3 style = "color: #000; text-align:center">add your equipment</h3>
+            <p style = "color: #000; text-align:left;padding-bottom:25px"> add your own headphones and speakers by going to "My Equipment"</p>
+                       
+
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+      <div class = "container" style = "margin-right: 35px; margin-left: 35px">
+          <div class = "row">
+             <img src = "http://icons.iconseeker.com/png/fullsize/be-dj/turntable.png" style = "max-width: 150px; margin-left:60px" alt = "headphones"></img>
+             <h3 style = "color: #000; text-align:center">entering the sound test</h3>
+            <p style = "color: #000; text-align:left;padding-bottom:25px"> enter the sound testing page by pressing "Start Sound Test" </p>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="item">
+       <div class = "container" style = "margin-right: 35px; margin-left: 35px">
+          <div class = "row">
+             <img src = "speaker.png" style = "max-width: 150px; margin-left:60px" alt = "headphones"></img>
+             <h3 style = "color: #000; text-align:center">starting the sound test</h3>
+            <p style = "color: #000; text-align:left;padding-bottom:25px"> press the "Test Noise Level" on the testing page to begin the test for 7.5 seconds </p>
+
+          </div>
+        </div>
+      </div>
+      <div class="item">
+       <div class = "container" style = "margin-right: 35px; margin-left: 35px">
+          <div class = "row">
+             <img src = "http://icons.iconarchive.com/icons/artua/mac/512/Home-icon.png" style = "max-width: 150px; margin-left:60px" alt = "headphones"></img>
+             <h3 style = "color: #000; text-align:center">add new environment</h3>
+            <p style = "color: #000; text-align:left"> press "Save to Environment" and enter the details of your environment in the next screen </p>
+
+          </div>
+        </div>
+      </div>
+      <div class="item">
+       <div class = "container" style = "margin-right: 35px; margin-left: 35px">
+          <div class = "row">
+             <img src = "http://icons.iconarchive.com/icons/artua/mac/512/Home-icon.png" style = "max-width: 150px; margin-left:60px" alt = "headphones"></img>
+            <h3 style = "color: #000; text-align:center">view your environment</h3>
+            <p style = "color: #000; text-align:left;"> you can view your saved environments by press "View Environments" on the home screen</p>
+                        
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+  <div class = "row text-center">
+    <span class = "btn btn-default" style = "margin-bottom: 25px" onclick="closeOverlay()">Close</span>
+  </div>
+</div>
+<!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left whiteicon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right whiteicon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
 		<div class="row row-bottom-margin soundtest">
   			<div class="col-xs-12 text-center">
     <div >
       <h1 class = "index-center-title">sound test</h1>
-      <p class = "index-center-subtitle">test your soundscape.</p>
+      <p class = "index-center-subtitle">test your soundscape.</p>  
+      <span onclick = "openOverlay('#overlay-inAbox')" id="overlaylaunch-inAbox" class = "btn btn-default">Tutorial</span>
+
       <a class="btn btn-info" href = "/soundtest" style = "padding: 5px; margin-bottom: 20px; margin-top: 10px; text-align: center; margin: auto;">Start Sound Test</a>
       <div style = "height:40px"></div>
     </div>

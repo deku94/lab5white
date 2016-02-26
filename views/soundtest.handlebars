@@ -20,28 +20,32 @@
 		<div class="container">
             <div>
                 <form id="environment"  action="/environment/pickEnv">
-                    <h4>Current Environment</h4>
+                    <h3>1. Select Your Environment</h3>
+                    <p>Select 'New' if testing in a new environment</p>
                     <select name="environment">
                         <option value='New'>New</option>
                         {{#each environment}}
                             <option value='{{name}}'>{{name}}</option>
                         {{/each}}
                     </select>
-                    <input id="submitBtn" type="submit" class="btn btn-primary btn-lg" id="save-results" value="Save to Environment"></input>
-                </form>
-            </div>
-            <div style="padding-top: 10%">
+                    <div style="padding-top: 2%">
+                        <h3>2. Test Your Environment</h3>
+                    <p>Press "Start Test" to test the selected environment's noise level for 7.5 seconds and wait for results below</p>
                 <i class="fa fa-volume-up fa-5x"></i>
-                <button type="button" class="btn btn-primary btn-lg" id="sound-test" style="margin-left:5%; vertical-align:75%">Test Noise Level</button>
+                <button type="button" class="btn btn-primary btn-lg" id="sound-test" style="margin-left:5%; vertical-align:75%">Start Test</button>
             </div>
             <div id="meter-div" hidden="hidden">
                     <canvas id="meter" width="500" height="50"></canvas>
             </div>
             <div id="test-result-div" hidden="hidden">
-                <h4>Results</h4>
+                <h3>3. View Results and Save</h3>
                 <div id="test-details">
                 </div>
             </div>
+                    <input id="submitBtn" type="submit" class="btn btn-success btn-lg" id="save-results" value="Save to Environment"></input>
+                </form>
+            </div>
+            
          </div>
 	</body>	
     <script type="text/javascript">
