@@ -33,15 +33,19 @@ function views(e){
 	var text="";
 	var height= String(e.length*150)+"px";
 	console.log(height);
-	for(key in e){
-		n=e[key]['equipment'];
-		var temp=e[key];
-		//console.log(e[key]);
+    var numEnvs = e['found'];
+	for(key in e["envs"]){
+		n=e["envs"][key]['equipment'];
+		var temp=e["envs"][key];
+		console.log(key);
 		text=text+"<br>"+ "<h4>Place:"+temp['name']+"</h4>  Noise:"+temp['noise']+"<br>  Type of place:"+temp['type'];
 		
 	}
 
 	var link="[id='"+n+"']";
+    if (numEnvs > 1) {
+        $(link + " div div span").html("Environments for " + n + '<p class = "box-subtitle"></p>');
+    }
 	$("[id='"+n+"']"+' div').css('max-height',height);
 	$("[id='"+n+"']"+' div div span p').html(text);	
 	toggling(link);

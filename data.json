@@ -70,7 +70,7 @@
 		},
 		{
 			"name": "Apple Earpods",
-			"type": "in-ear earphones",
+			"type": "in-ear earbuds",
 			"usage": "music",
 			"idnum":"3"	
 		},
@@ -102,18 +102,37 @@
 		}  
 			
 	],
-	"headphones_options":
-	{
-		"open-end":"open-end", 
-		"closed-end" :"closed-end",  
-		"in-ear":"in-ear"
-	},
-	"speaker_options":
-	{
-		"Bluetooth-speaker":"Bluetooth speaker", 
-		"soundsystem":"soundsystem", 
-		"pc-speakers":"pc speakers"
-	},
+	"equipment_types": [
+        {
+            "eq_type" : "open-end headphones"
+        },
+        {
+            "eq_type" : "closed-end headphones"
+        },
+        {
+            "eq_type" : "in-ear earbuds"
+        },
+        {
+            "eq_type" : "Bluetooth speaker"
+        },
+        {
+            "eq_type" : "Sound system"
+        },
+        {
+            "eq_type" : "PC Speakers"
+        }
+    ],
+    "usage_types": [
+        {
+            "us_type" : "gaming"
+        },
+        {
+            "us_type" : "music"
+        },
+        {
+            "us_type" : "gaming/music"
+        }
+    ],
 	"soundTemp":{
 		"value":"50"
 	},

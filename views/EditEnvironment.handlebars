@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        	<title>My Environment</title>	
+        	<title>Edit Environment</title>	
         	<meta charset="utf-8">
         	<meta name="viewport" content="width=device-width, initial-scale=1.0">
         	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -33,53 +33,48 @@
                     margin: 0 auto; 
                 }
                  .whiteicon {color:white;}
-            </style>   
+            </style>   -->
             <script type="text/javascript">
                 function updateTextInput(val) {
                     document.getElementById('displaypoints').value=val; 
                 }
 
-            </script>  -->
+            </script>  
     </head>
     <body>
         {{> navbarsPartials}}
         <div class = "container">
             <a href="/environment">
-                <div class="row row-bottom-margin" style = "margin-bottom: 0px;margin-top:3%; background-color: #151515;
-                      background-size: 100% auto ;
-                      padding-bottom: 0px;">
-                <div class="col-xs-8" style = "max-height: 125px">
-                  <div style = "padding-top: 2%; padding-bottom: 15%" > <!--Changed padding top to 2 and paddint bottom to 15-->
-                    <i class="fa fa-arrow-left fa-2x whiteicon"></i>
-                    <span style = "margin-left: 10px; padding-bottom: 0px; padding-bottom: 0px; margin-bottom: 0px; text-align:center; font-size: 25px; color: #ffffff; font-family: Verdana"> BACK TO ENVIRONMENTS
-                     <p style = "text-align: left; padding-top: 0px; margin-top: 0px; font-size: 10px">Going Back </p></span>
-                   
-                  
-                  </div>
-                </div>
-              </div>
-            </a>
+			<div class="row row-bottom-margin" >
+		    <div class="col-xs-12">
+		      <div> <!--Changed padding top to 2 and paddint bottom to 15-->
+		        <i class="fa fa-arrow-left fa-2x whiteicon"></i>
+		        <span class = "box-title" style="font-size:20px"> back to my environments</span>
+		       
+		      
+		      </div>
+		    </div>
+		  </div>
+		</a>
 
-            <div class="row row-bottom-margin" style = "margin-bottom: 0px;margin-top:3%; background-color: #151515;
-                      background-size: 100% auto ;
-                      padding-bottom: 0px;">
-                <div class="" style = "">
+            <div class="row row-bottom-margin">
                     <div style = "padding-top: 2%; padding-bottom: 15%" > <!--Changed padding top to 2 and paddint bottom to 15-->
-                        <span style = "margin-left: 10px; padding-bottom: 0px; padding-bottom: 0px; margin-bottom: 0px; text-align:center; font-size: 25px; color: #ffffff; font-family: Verdana"> Update<br>
-                        </span>
+                        <span class = "box-title"> Edit Environment<br>
+		                </span>
                         <br>
                 
-                        <form style = "margin-left: 10px; padding-bottom: 0px; padding-bottom: 0px; margin-bottom: 0px; text-align:left; font-size: 25px; color: #ffffff; font-family: Verdana" id="/addingEnv" action="/EdittingEnv/{{tempEnv.idnum}}">
-                        <div class = "form-group">
-                            <label class = "form-label" style="width:auto;" for="name"> Name of Environment </label>
-                            <textarea style="width:70%; height:30px; overflow:hidden" id="name" name="name" placeholder={{tempEnv.Environment}}>{{tempEnv.Environment}}</textarea>
-                        </div>
+                        <form style = "padding-left: 10px" id="AddingEquip" action="/EdittingEquipment/{{tempEnv.idnum}}">
+                            <div class="form-group">
+                                <label class = "form-label" for="name"> Name of Environment </label>
+                                <input style="width:70%; overflow:hidden" id="name" name="name" value="{{tempEnv.name}}"></input>
+                            
+                            </div>
                         <div class = "form-group">
 
                             <label class = "form-label" or="equip">Select Gear</label>
                             <select id="equip" name="equip"  data-native-menu="false">
                                 {{#each equipment}}
-                                    {{#compare tempEnv.name name}}
+                                    {{#compare ../tempEnv.name name}}
                                         <option value='{{name}}' selected="selected">{{name}}</option>
                                     {{else}}
                                         <option value='{{name}}'>{{name}}</option>
@@ -101,7 +96,7 @@
 
                             <select id="place" name="place" data-native-menu="false">
                                 {{#each places}}
-                                    {{#compare tempEnv.location location}}
+                                    {{#compare ../tempEnv.location location}}
                                         <option value='{{location}}' selected="selected">{{location}}</option>
                                     {{else}}
                                         <option value='{{location}}'>{{location}}</option>
@@ -120,7 +115,6 @@
                     
                     </div>
                   
-                </div>
                     
             </div>
         </div>

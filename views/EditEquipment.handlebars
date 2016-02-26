@@ -3,14 +3,13 @@
 
 <html>
 <head>
-	<title>Add Equipment</title>	
+	<title>Edit Equipment</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	
 	<script src="/js/jquery-1.11.0.js" type="text/javascript"></script>
 	<script src="/js/bootstrap.js" type="text/javascript"></script>
-	<script src="/js/hci-friends.js" type="text/javascript"></script>
 	<link rel="stylesheet" href="/css/hci-friends.css">
 	<link rel="stylesheet" href="/css/bootstrap.css">
 	<link rel="stylesheet" href="/css/bootstrap-theme.css">
@@ -55,7 +54,7 @@
 		      <form style = "padding-left: 10px" id="AddingEquip" action="/EdittingEquipment/{{tempEquip.idnum}}">
 	      		<div class="form-group">
 			    	<label class = "form-label" for="name"> Name of Equipment </label>
-			    	<textarea style="width:70%; height:30px; overflow:hidden" id="name" name="name" placeholder="{{tempEquip.name}}">{{tempEquip.name}}</textarea>
+			    	<input style="width:70%; overflow:hidden" id="name" name="name" value="{{tempEquip.name}}"></input>
 		    	
 		    	</div>
 		    	<div class="form-group">
@@ -63,13 +62,13 @@
 		    			<label class = "form-label" for="type"> Type of Equipment </label>
 		    			<br>
 		    			<select name="type" id="type" data-native-menu="false">
-  							<option value="{{tempEquip.type}}" selected='selected'>{{tempEquip.type}}</option>
-  							<option value="open-end"> open-end</option>
-  							<option value="closed-end"> closed-end</option>
-  							<option value="in-ear"> in-ear</option>
-  							<option value="Bluetooth-speaker"> Bluetooth-speaker</option>
-  							<option value="soundsystem"> soundsystem</option>
-  							<option value="pc speakers"> pc speakers</option>
+                            {{#each equipment_types}}
+  							   {{#compare ../tempEquip.type eq_type}}
+                                 <option value='{{eq_type}}' selected="selected">{{eq_type}}</option>
+                               {{else}}
+                                 <option value='{{eq_type}}'>{{eq_type}}</option>
+                               {{/compare}}
+                            {{/each}}
 						</select>
 		    		</span>	
 		      	</div>
@@ -78,10 +77,13 @@
 			    		<label class = "form-label" for="usage"> Usage </label>
 			    		<br>
 				    	<select name="usage" id="usage" data-native-menu="false">
-				    		<option value="{{tempEquip.usage}}" selected='selected'>{{tempEquip.usage}}</option>
-				    		<option value="gaming"> Gaming</option>
-				    		<option value="music"> Music</option>
-				    		<option value="gaming/music"> Gaming/Music</option>
+				    		{{#each usage_types}}
+  							   {{#compare ../tempEquip.usage us_type}}
+                                 <option value='{{us_type}}' selected="selected">{{us_type}}</option>
+                               {{else}}
+                                 <option value='{{us_type}}'>{{us_type}}</option>
+                               {{/compare}}
+                            {{/each}}
 			        	</select>
 
 			  		</span>

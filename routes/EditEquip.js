@@ -25,23 +25,28 @@ module.exports={
 		//console.log(req.params.id);
 		var finding=String(req.params.id);
 		var key;
-		var temp=new Array();
+		var temp = {
+            "envs" : [],
+            "found" : 0
+        }
 		for(key in data.environment){
 			//console.log(data['environment'][key]['equipment']);
 			if(finding.localeCompare(String(data['environment'][key]['equipment']))==0){
 				//console.log("FOUND");
-				found=1;
-				temp.push(data['environment'][key]);
+				++found;
+				temp["envs"].push(data['environment'][key]);
 				//res.json(data['environment'][key]);
 				
 			}
 
 		}
-		if (found==1){
+		if (found > 0){
+            temp["found"] = found;
 			res.json(temp);
 			return;
 		}
-		temp.push({
+        temp["found"] = found;
+		temp["envs"].push({
 			"name": "NOWHERE",
 			"equipment": finding,
 			"noise": "NO INFO",
@@ -62,6 +67,8 @@ module.exports={
 					"usage": data['equipment'][key]['usage'],
 					'idnum':data['equipment'][key]['idnum']	
 				};
+                console.log(data['tempEquip']);
+                console.log(data['equipment_types']);
 
 				//res.render('EditEquipment',data);
 				//return;
